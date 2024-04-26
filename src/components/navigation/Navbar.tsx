@@ -5,19 +5,15 @@ import Logo from "../template/Logo"
 import { IconBars } from "../template/Icons"
 import Sidebar from "./Sidebar"
 
-const Navbar = (): React.JSX.Element => {
-    const [scrollOn, setScrollOn] = useState<boolean>(false)
+interface INavbarProps {
+    scrollOn: boolean
+}
+
+const Navbar = ({scrollOn}: INavbarProps): React.JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const handleClick = (): void => {
         setIsOpen(!isOpen)
     }
-
-    useEffect(() => {
-        const handleScroll = (): void => {
-            setScrollOn(window.scrollY > 150);
-        }
-        return window.addEventListener("scroll", handleScroll)
-    }, [])
 
     return (
         <nav className={`flex justify-between lg:justify-center items-center  bg-white text-black w-full transition-all duration-1000 ${scrollOn ? "p-0": "p-5"} sticky top-0 z-20`}>

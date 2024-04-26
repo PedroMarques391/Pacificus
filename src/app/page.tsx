@@ -21,22 +21,22 @@ export default function Home() {
         </div>
         <H1>Nossas Áreas de Atuação são:</H1>
         <div className="flex gap-10 flex-wrap justify-center">
-          <ExpertiseCard href="/" icon={IconBook(8)} title="Fusões e Aquisições" >
+          <ExpertiseCard href="/areas-of-expertise#fusion" icon={IconBook(8)} title="Fusões e Aquisições" >
             Envolve assessorar empresas em transações de fusões, aquisições, cisões e incorporações. Os advogados ajudam na due diligence, negociação de contratos, estruturação de transações e obtenção de aprovações regulatórias.
           </ExpertiseCard>
 
-          <ExpertiseCard href="/" icon={IconBook(8)} title="Governança Corporativa" >
+          <ExpertiseCard href="/areas-of-expertise/#governance" icon={IconBook(8)} title="Governança Corporativa" >
             Temos advogados especializados em governança corporativa que ajudam empresas a estabelecer boas práticas de governança, incluindo a estruturação de conselhos de administração, desenvolvimento de políticas corporativas, e assessoria sobre conformidade regulatória e ética empresarial.
           </ExpertiseCard>
-          <ExpertiseCard href="/" icon={IconBook(8)} title="Conformidade e Regulamentação" >
+          <ExpertiseCard href="/areas-of-expertise/#conformity" icon={IconBook(8)} title="Conformidade e Regulamentação" >
             Envolve garantir que as empresas cumpram todas as leis e regulamentos aplicáveis em suas operações. Os advogados auxiliam na interpretação e implementação de normas legais, como leis de proteção ao consumidor, leis trabalhistas, normas ambientais, entre outras.
           </ExpertiseCard>
 
-          <ExpertiseCard href="/" icon={IconBook(8)} title="Contratos Comerciais" >
+          <ExpertiseCard href="/areas-of-expertise/#contracts" icon={IconBook(8)} title="Contratos Comerciais" >
             Nossos advogados trabalham nesta área para ajudar empresas a negociar e elaborar contratos comerciais, incluindo contratos de fornecimento, distribuição, prestação de serviços, franquias, licenciamento de propriedade intelectual e acordos de joint venture.
           </ExpertiseCard>
 
-          <ExpertiseCard href="/" icon={IconBook(8)} title="Litígios Empresariais e Arbitragem" >
+          <ExpertiseCard href="/areas-of-expertise/#disputes" icon={IconBook(8)} title="Litígios Empresariais e Arbitragem" >
             Esta área abrange disputas legais envolvendo empresas, incluindo litígios contratuais, disputas societárias, ações de responsabilidade civil contra diretores e administradores, e outras questões comerciais. Advogados representam clientes em processos judiciais e arbitrais, buscando proteger seus interesses e resolver disputas de forma eficaz.
           </ExpertiseCard>
         </div>

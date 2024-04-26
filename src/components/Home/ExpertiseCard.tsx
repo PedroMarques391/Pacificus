@@ -22,7 +22,7 @@ const ExpertiseCard = ({ icon, title, children, className, href }: IExpertiseCar
         <div className='mt-2 text-lg text-left p-2 h-full'>
           {children}
         </div>
-        <Link href={`#${href}`} className='flex flex-col items-baseline p-2 text-xl text-blue-950 font-bold'>
+        <Link href={href} className='flex flex-col items-baseline p-2 text-xl text-blue-950 font-bold'>
           Saber mais
           <div className="bg-black/40 h-0.5 group-hover:animate-lines" />
         </Link>
