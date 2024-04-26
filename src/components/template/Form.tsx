@@ -75,7 +75,7 @@ const Form = (): React.JSX.Element => {
                 </form>
             </div>
 
-            <div className="w-full lg:w-1/2 flex flex-col items-start">
+            <div className="w-full lg:w-1/2 flex flex-col items-center">
                 <H1>Nosso Endereço</H1>
                 <div className="mt-10 text-light-200">
                     <p className="text-xl">Pacificus & Associados</p>
