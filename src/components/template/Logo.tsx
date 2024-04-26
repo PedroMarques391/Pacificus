@@ -1,11 +1,17 @@
 import React from 'react'
 import Image from "next/image"
+import Link from 'next/link'
 
-const Logo = () => {
+interface ILogoProps {
+    white?: boolean
+}
+
+const Logo = ({white}: ILogoProps): React.JSX.Element => {
     return (
-        <div className="h-20 w-auto sticky top-0">
+        <Link href={"/"}>
+            <div className="h-20 w-auto sticky top-0">
             <Image
-                src={"/pacificus.png"}
+                src={`${white ? "/PacificusWhite.png" : "/pacificus.png" }`}
                 alt="Logo da barra de navegação"
                 height={300}
                 width={300}
@@ -13,6 +19,7 @@ const Logo = () => {
                 className="h-20 w-auto"
             />
         </div>
+        </Link>
     )
 }
 

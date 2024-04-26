@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { IconFacebook, IconInstagram, IconLinkedin } from "./Icons"
 import List from "../navigation/List"
+import Logo from "./Logo"
 
 
 const Footer = (): React.JSX.Element => {
@@ -8,6 +9,8 @@ const Footer = (): React.JSX.Element => {
         <footer className="bg-black flex flex-col lg:flex-row text-xl justify-center p-10 gap-10">
             <section className="text-white w-full lg:w-1/3 text-center order-1 lg:order-1">
                 <p className="p-5 border-b border-gray-500">Nossa Equipe</p>
+                <div className="w-full flex justify-center items-center"
+                ><Logo white={true}/></div>
                 <Link href={"/team"}>
                     Venha conhecer nossa equipe
                 </Link>

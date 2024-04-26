@@ -3,6 +3,13 @@ import Body from '@/components/template/Body'
 import Form from '@/components/template/Form'
 import Layout from '@/components/template/Layout'
 import React from 'react'
+import type { Metadata} from "next";
+
+
+export const metadata: Metadata = {
+  title: `Pacificus & Associados | Áreas de Atuação`,
+  description: "Pacificus & Associados | Áreas de Atuação",
+}
 
 const page = () => {
   return (

@@ -1,6 +1,13 @@
 import Body from '@/components/template/Body'
 import Layout from '@/components/template/Layout'
 import React from 'react'
+import type { Metadata} from "next";
+
+
+export const metadata: Metadata = {
+  title: `Pacificus & Associados | Código de Ética`,
+  description: "Pacificus & Associados | Código de Ética",
+}
 
 const page = () => {
   return (

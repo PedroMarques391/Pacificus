@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import List from "./List"
 import Logo from "../template/Logo"
 import { IconBars } from "../template/Icons"

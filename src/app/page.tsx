@@ -4,6 +4,13 @@ import Form from "@/components/template/Form";
 import H1 from "@/components/template/H1";
 import { IconBook } from "@/components/template/Icons";
 import Layout from "@/components/template/Layout";
+import type { Metadata} from "next";
+
+
+export const metadata: Metadata = {
+  title: `Pacificus & Associados | Início`,
+  description: "Pacificus & Associados | Página inicial",
+}
 
 export default function Home() {
   return (

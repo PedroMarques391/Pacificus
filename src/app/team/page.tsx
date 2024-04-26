@@ -2,7 +2,13 @@ import Associate from '@/components/team/Associate'
 import Body from '@/components/template/Body'
 import Layout from '@/components/template/Layout'
 import { associates } from '../../../data/infos'
+import type { Metadata} from "next";
 
+
+export const metadata: Metadata = {
+  title: `Pacificus & Associados | Equipe`,
+  description: "Pacificus & Associados | Equipe",
+}
 const page = (): React.JSX.Element => {
   return (
     <main>
