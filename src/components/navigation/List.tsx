@@ -16,8 +16,8 @@ const List = ({ children, href, className }: IListProps): React.JSX.Element => {
             className={`flex flex-col lg:items-baseline justify-between p-5 text-light-200 text-xl group h-20 w-full items-baseline lg:w-auto ${className}`}>
             <Link href={href}>
                 {children}
+                <div className={`bg-black/40 h-0.5 mt-2 lg:mt-5 group-hover:animate-lines ${isCurrentPath ? "w-full" : "w-0"}`} />
             </Link>
-            <div className={`bg-black/40 h-0.5 group-hover:animate-lines ${isCurrentPath ? "w-full" : "w-0"}`} />
         </li>
     )
 }

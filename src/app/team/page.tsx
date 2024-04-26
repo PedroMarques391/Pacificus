@@ -1,8 +1,9 @@
+import Associate from '@/components/team/Associate'
 import Body from '@/components/template/Body'
 import Layout from '@/components/template/Layout'
-import React from 'react'
+import { associates } from '../../../data/infos'
 
-const page = () => {
+const page = (): React.JSX.Element => {
   return (
     <main>
       <Layout>
@@ -10,7 +11,18 @@ const page = () => {
           banner='bg-BannerTeam'
           title='Conheça nosso time'
         >
-          a
+          <div className='w-full flex justify-center items-center my-5 flex-wrap gap-14'>
+            {associates.map((associate, i) => (
+              <Associate
+              key={i}
+              name={associate.nome}
+              email={associate.email}
+              training={associate.training}
+              more={associate.more}
+              />
+
+            ))}
+          </div>
         </Body>
       </Layout>
     </main>

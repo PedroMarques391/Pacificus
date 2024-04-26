@@ -28,10 +28,10 @@ const ExpertiseCard = ({ icon, title, children, className, href }: IExpertiseCar
         </Link>
       </section >
     ) : (
-      <section className='w-4/5 flex flex-col justify-center my-5 pb-10 border border-gray-400 rounded-xl mx-auto'>
+      <section className='w-full lg:w-4/5 flex flex-col justify-center my-5 pb-10 border border-gray-400 rounded-xl mx-auto'>
         <div>
-          <H1>{title}</H1>
-          <div className='flex flex-col ml-10 px-5 gap-y-6 text-xl text-light-200'>
+          <H1 className='text-xl md:text-2xl lg:text-3xl'>{title}</H1>
+          <div className='flex flex-col ml-2 md:ml-10 px-5 gap-y-6 text-base lg:text-xl text-light-200'>
             {children}
           </div>
         </div>

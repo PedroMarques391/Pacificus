@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import List from "./List"
 import Logo from "../template/Logo"
-import { IconArrowLeft, IconArrowRight, IconBars } from "../template/Icons"
+import { IconBars } from "../template/Icons"
 import Sidebar from "./Sidebar"
 
 const Navbar = (): React.JSX.Element => {
@@ -14,7 +14,7 @@ const Navbar = (): React.JSX.Element => {
 
     useEffect(() => {
         const handleScroll = (): void => {
-            setScrollOn(window.scrollY > 100);
+            setScrollOn(window.scrollY > 150);
         }
         return window.addEventListener("scroll", handleScroll)
     }, [])
