@@ -1,5 +1,6 @@
 import React from 'react'
 import Banner from './Banner'
+import H1 from './H1'
 
 interface IBodyProps {
   banner: string
@@ -12,9 +13,9 @@ const Body = ({banner, title, children}: IBodyProps): React.JSX.Element => {
     <main className='w-full flex flex-col items-center'>
         <Banner background={banner}/>
         <section className='w-4/5 lg:mt-5'>
-            <h1 className='text-center p-5 text-lg md:text-3xl tracking-widest italic text-light-200'>
+            <H1 className='text-lg md:text-3xl tracking-widest italic my-5'>
               {title}
-            </h1>
+            </H1>
               {children} 
         </section>
     </main>

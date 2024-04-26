@@ -14,13 +14,13 @@ const Navbar = (): React.JSX.Element => {
 
     useEffect(() => {
         const handleScroll = (): void => {
-            setScrollOn(window.scrollY > 50);
+            setScrollOn(window.scrollY > 100);
         }
         return window.addEventListener("scroll", handleScroll)
     }, [])
 
     return (
-        <nav className={`flex justify-between lg:justify-center items-center p-2 bg-white text-black w-full transition-all duration-1000 ${scrollOn && "p-0"} sticky top-0 z-20`}>
+        <nav className={`flex justify-between lg:justify-center items-center  bg-white text-black w-full transition-all duration-1000 ${scrollOn ? "p-0": "p-5"} sticky top-0 z-20`}>
             <div className={`fixed top-0  transition-all duration-1000 z-30 ${!isOpen ? "-left-96" : "left-0" }`}>
                 <Sidebar handleClick={handleClick} setIsOpen={setIsOpen} />
             </div>

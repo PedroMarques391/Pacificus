@@ -5,14 +5,15 @@ import { usePathname } from "next/navigation"
 type IListProps = {
     href: string
     children: React.ReactNode
+    className?: string
 } & LinkProps
 
-const List = ({ children, href }: IListProps): React.JSX.Element => {
+const List = ({ children, href, className }: IListProps): React.JSX.Element => {
     const pathName = usePathname()
     const isCurrentPath = pathName === href
     return (
         <li
-            className={`flex flex-col lg:items-baseline justify-between p-5 text-light-200 text-xl group h-20 w-full items-baseline lg:w-auto`}>
+            className={`flex flex-col lg:items-baseline justify-between p-5 text-light-200 text-xl group h-20 w-full items-baseline lg:w-auto ${className}`}>
             <Link href={href}>
                 {children}
             </Link>

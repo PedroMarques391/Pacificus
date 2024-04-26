@@ -70,7 +70,7 @@ const Sidebar = ({handleClick, setIsOpen}: ISidebarProps): React.JSX.Element => 
                     <div
                         onClick={() => setIsOpen(false)}
                         className="flex justify-center items-center transition-all duration-700">
-                        {IconBook}
+                        {IconBook()}
                         <SubtitlesSideMenu>Código de Ética e conduta</SubtitlesSideMenu>
                     </div>
                 </List>
