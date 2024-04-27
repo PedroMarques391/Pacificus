@@ -7,7 +7,7 @@ interface IH1Props {
 
 const H1 = ({children, className}: IH1Props): React.JSX.Element => {
   return (
-    <h1 className={`my-10 text-center text-3xl text-light-200 dark:text-white ${className}`}>{children}</h1>
+    <h1 className={`my-10 lg:my-12 text-center text-3xl text-light-200 dark:text-white ${className}`}>{children}</h1>
   )
 }
 
