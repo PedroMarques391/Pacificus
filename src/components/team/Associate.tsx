@@ -24,7 +24,7 @@ const Associate = ({ name, email, training, more }: IAssociateProps): React.JSX.
 
             <div className='w-full ml-5'>
                 <H1 className='text-base lg:text-xl text-black/100 text-start'>Formação</H1>
-                <ul className='flex lg:text-lg flex-col gap-y-3 text-light-200 list-disc'>
+                <ul className='flex lg:text-lg flex-col gap-y-3 text-light-200 list-disc dark:text-white'>
                     {training.map((training, index) => (
                         <li key={index}>
                             {training}
@@ -35,7 +35,7 @@ const Associate = ({ name, email, training, more }: IAssociateProps): React.JSX.
 
             <div className='w-full ml-5'>
                 <H1 className='text-base lg:text-xl text-black/100 text-start'>Sobre o Profissional</H1>
-                <ul className='flex lg:text-lg flex-col gap-y-3 text-light-200 list-disc'>
+                <ul className='flex lg:text-lg flex-col gap-y-3 text-light-200 list-disc dark:text-white'>
                     {more.map((more, index) => (
                         <li key={index}>
                             {more}

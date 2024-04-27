@@ -5,6 +5,7 @@ import Content from './Content'
 import Footer from './Footer'
 import { IconArrowUp } from './Icons'
 import Link from 'next/link'
+import useDarkContext from '@/hooks/useDark'
 
 interface ILayoutProps {
   children: React.ReactNode
@@ -12,6 +13,11 @@ interface ILayoutProps {
 
 const Layout = ({ children }: ILayoutProps): React.JSX.Element => {
   const [scrollOn, setScrollOn] = useState<boolean>(false)
+
+  const { theme } = useDarkContext()
+
+  console.log(theme);
+  
 
   useEffect(() => {
     const handleScroll = (): void => {
@@ -21,8 +27,8 @@ const Layout = ({ children }: ILayoutProps): React.JSX.Element => {
   }, [])
 
   return (
-    <main className='w-full flex transition-all duration-500'>
-      <section className='flex flex-col w-full transition-all'>
+    <main className={`${theme} w-full flex transition-all duration-500`}>
+      <section className='flex flex-col w-full transition-all duration-700 dark:bg-black'>
         <Navbar scrollOn={scrollOn}/>
         <Content>
           {children}

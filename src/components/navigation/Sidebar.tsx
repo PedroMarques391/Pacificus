@@ -8,6 +8,7 @@ import {
 } from "../template/Icons"
 import List from "./List"
 import SubtitlesSideMenu from "../template/SubtitlesSideMenu"
+import DarkModeButton from "../template/DarkModeButton"
 
 interface ISidebarProps {
     setIsOpen: any
@@ -17,14 +18,14 @@ interface ISidebarProps {
 const Sidebar = ({handleClick, setIsOpen}: ISidebarProps): React.JSX.Element => {
     return (
         <aside className={`
-        flex flex-col gap-y-10 bg-white lg:hidden
+        flex flex-col gap-y-10 bg-white dark:bg-black/90 lg:hidden
         z-40 
         transition-all duration-700 w-full h-screen
         `}>
             <div className="w-20 h-20 items-center ml-4 flex top-3 flex-col justify-center relative group z-30"
                 onClick={handleClick}>
                 {IconClose}
-                <p className="absolute w-24 text-center top-16 transition-opacity opacity-0 group-hover:opacity-100 text-black/50">
+                <p className="absolute w-24 text-center top-16 transition-opacity opacity-0 group-hover:opacity-100 text-black/50 dark:text-white">
                     Fechar Menu
                 </p>
             </div>
@@ -74,6 +75,7 @@ const Sidebar = ({handleClick, setIsOpen}: ISidebarProps): React.JSX.Element => 
                         <SubtitlesSideMenu>Código de Ética e conduta</SubtitlesSideMenu>
                     </div>
                 </List>
+                <DarkModeButton/>
             </ul>
         </aside>
     )

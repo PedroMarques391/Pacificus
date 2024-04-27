@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <Layout>
       <Body
-        banner="bg-BannerHome"
+        banner="bg-BannerHome dark:bg-BannerHomeWhite"
         title="A importancia da propriedade intelectual e tecnologia"
       >
         <div className="text-justify md:text-left text-base md:text-lg flex flex-col gap-y-5 border-b border-black/20 pb-2">
@@ -48,9 +48,9 @@ export default function Home() {
           </ExpertiseCard>
         </div>
       </Body>
-      <section className="flex flex-col items-center bg-slate-700/60 my-6">
-        <H1 className="text-white">Nossos diferenciais:</H1>
-        <div className="w-4/5 text-light-300 text-xl pb-16">
+      <section className="flex flex-col items-center bg-slate-700/60 my-6 dark:bg-slate-200">
+        <H1 className="text-white dark:text-slate-950">Nossos diferenciais:</H1>
+        <div className="w-4/5 text-light-300 text-xl pb-16 dark:text-black">
           A Pacificus & Associados se destaca no campo do Direito Empresarial e Societário por sua expertise especializada, abordagem estratégica, compromisso com a excelência, atendimento personalizado e capacidade de oferecer soluções inovadoras e criativas para as necessidades de seus clientes. Com uma equipe altamente qualificada e comprometida, nosso escritório está pronto para fornecer serviços jurídicos de alta qualidade e orientação estratégica para empresas em busca de sucesso e conformidade legal.
         </div>
       </section>

@@ -13,8 +13,8 @@ interface IExpertiseCardProps {
 const ExpertiseCard = ({ icon, title, children, className, href }: IExpertiseCardProps): React.JSX.Element => {
   return (
     href ? (
-      <section className={`flex flex-col w-96 sm:w-full lg:w-96 border p-3 border-black/15 rounded-lg ${className} lg:mb-10 shadow-sm shadow-black justify-between group`} >
-        <div className='flex p-2 gap-x-5 text-lg justify-center items-center text-slate-700 h-20'>
+      <section className={`flex flex-col w-96 sm:w-full lg:w-96 border p-3 border-black/15 dark:border-white rounded-lg ${className} lg:mb-10 shadow-sm shadow-black dark:shadow-white justify-between group`} >
+        <div className='flex p-2 gap-x-5 text-lg justify-center items-center text-slate-700 dark:text-slate-100 h-20'>
           <div>{icon}</div>
           <h1>{title}</h1>
 
@@ -22,16 +22,16 @@ const ExpertiseCard = ({ icon, title, children, className, href }: IExpertiseCar
         <div className='mt-2 text-lg text-left p-2 h-full'>
           {children}
         </div>
-        <Link href={href} className='flex flex-col items-baseline p-2 lg:text-xl text-blue-950 font-bold'>
+        <Link href={href} className='flex flex-col items-baseline p-2 lg:text-xl text-blue-950 dark:text-gray-200 font-bold'>
           Saber mais
           <div className="bg-black/40 h-0.5 group-hover:animate-lines" />
         </Link>
       </section >
     ) : (
-      <section className='w-full lg:w-4/5 flex flex-col justify-center my-5 pb-10 border border-gray-400 rounded-xl mx-auto'>
+      <section className='w-full lg:w-4/5 flex flex-col justify-center my-5 pb-10 border border-gray-400 rounded-xl mx-auto dark:border-white'>
         <div>
           <H1 className='text-xl md:text-2xl lg:text-3xl'>{title}</H1>
-          <div className='flex flex-col ml-2 md:ml-10 px-5 gap-y-6 text-base lg:text-xl text-light-200'>
+          <div className='flex flex-col ml-2 md:ml-10 px-5 gap-y-6 text-base lg:text-xl text-light-200 dark:text-white'>
             {children}
           </div>
         </div>

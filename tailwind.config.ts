@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -17,6 +18,11 @@ const config: Config = {
           "BannerTeam" : 'url("/banners/BannerTeam.png")',
           "BannerContact" : 'url("/banners/BannerContact.png")',
           "BannerEthics" : 'url("/banners/BannerEthics.png")',
+          "BannerHomeWhite" : 'url("/banners/BannerHomeWhite.png")',
+          "BannerAreaWhite" : 'url("/banners/BannerAreaWhite.png")',
+          "BannerTeamWhite" : 'url("/banners/BannerTeamWhite.png")',
+          "BannerContactWhite" : 'url("/banners/BannerContactWhite.png")',
+          "BannerEthicsWhite" : 'url("/banners/BannerEthicsWhite.png")',
       },
       colors: {
         "light-100": "#FFFFFF",

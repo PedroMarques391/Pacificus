@@ -16,7 +16,7 @@ const page = () => {
     <main>
       <Layout>
         <Body
-          banner='bg-BannerContact'
+          banner='bg-BannerContact dark:bg-BannerContactWhite'
           title='Encontre a gente'
         >
           <Form />

@@ -56,15 +56,15 @@ const Form = (): React.JSX.Element => {
                         onChange={(e) => setSubject(e.target.value)}
                     />
                     <label>
-                        <p className="pl-5 py-2 text-lg">Sua mensagem</p>
+                        <p className="pl-5 py-2 text-lg dark:text-white/80">Sua mensagem</p>
                         <textarea
-                            className="py-2 pl-5 text-lg h-40 bg-light-200/10 w-full border border-light-200/40 rounded-md focus:outline-none"
+                            className="py-2 pl-5 text-lg h-40 bg-light-200/10 w-full border border-light-200/40 rounded-md focus:outline-none dark:bg-white/90 dark:text-black"
                             required
                             onChange={(e) => setMessage(e.target.value)} />
                     </label>
 
                     <button
-                        className="w-full bg-black text-white p-2 text-xl rounded-lg mt-4 hover:bg-gray-300 hover:text-black transition-all duration-1000"
+                        className="w-full bg-black text-white p-2 text-xl rounded-lg mt-4 hover:bg-gray-300 hover:text-black transition-all duration-1000 dark:bg-transparent dark:border dark:text-white dark:hover:bg-white dark:hover:text-black"
                         type="submit">Confirmar
                     </button>
 
@@ -75,9 +75,9 @@ const Form = (): React.JSX.Element => {
                 </form>
             </div>
 
-            <div className="w-full lg:w-1/2 flex flex-col items-center">
+            <div className="w-full lg:w-1/2 flex flex-col items-center ">
                 <H1>Nosso Endereço</H1>
-                <div className="mt-10 text-light-200">
+                <div className="mt-10 text-light-200 dark:text-white">
                     <p className="text-xl">Pacificus & Associados</p>
                     <div className="mt-2 text-lg">
                         Rua das Magnólias, 1200410, Bairro do Lírio Vermelho Novo, Cidade das Palmeiras - Rio Grande do Sul

@@ -13,10 +13,10 @@ const List = ({ children, href, className }: IListProps): React.JSX.Element => {
     const isCurrentPath = pathName === href
     return (
         <li
-            className={`flex flex-col lg:items-baseline justify-between p-5 text-light-200 text-xl group h-20 w-full items-baseline lg:w-auto ${className}`}>
+            className={`flex flex-col lg:items-baseline justify-between p-5 text-light-200 text-xl group h-20 w-full items-baseline lg:w-auto ${className} dark:text-light-100`}>
             <Link href={href}>
                 {children}
-                <div className={`bg-black/40 h-0.5 mt-2 lg:mt-5 group-hover:animate-lines ${isCurrentPath ? "w-full" : "w-0"}`} />
+                <div className={`bg-black/40 dark:bg-white h-0.5 mt-2 lg:mt-5 group-hover:animate-lines ${isCurrentPath ? "w-full" : "w-0"}`} />
             </Link>
         </li>
     )

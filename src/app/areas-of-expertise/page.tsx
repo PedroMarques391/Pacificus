@@ -16,7 +16,7 @@ const page = () => {
     <main>
       <Layout>
         <Body
-          banner='bg-BannerArea'
+          banner='bg-BannerArea dark:bg-BannerAreaWhite'
           title='A atuação da Pacificus e Associados tem como foco o Direito Empresarial e Societário, destacando-se:'
         >
           <ExpertiseCard title='Fusões e Aquisições'>

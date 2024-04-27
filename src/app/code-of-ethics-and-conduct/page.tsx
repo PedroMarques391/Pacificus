@@ -14,10 +14,10 @@ const page = () => {
     <main>
       <Layout>
         <Body
-          banner='bg-BannerEthics'
+          banner='bg-BannerEthics dark:bg-BannerEthicsWhite'
           title='Nosso Código de Ética e conduta'
         >
-          <div className='flex flex-col gap-5 text-lg lg:text-xl text-light-200 mb-10'>
+          <div className='flex flex-col gap-5 text-lg lg:text-xl text-light-200 mb-10 dark:text-white'>
             <p>A Pacificus & Associados é comprometida com os mais altos padrões de ética, integridade e conduta profissional em todas as suas operações. Este Código de Ética e Conduta estabelece as diretrizes e princípios pelos quais todos os funcionários, diretores, parceiros e contratados da empresa devem aderir em suas atividades comerciais e relacionamentos profissionais.</p>
 
             <p>A Pacificus & Associados valoriza a diversidade e respeita os direitos individuais de todos os seus membros e partes interessadas. Discriminação, assédio, intimidação ou tratamento injusto com base em raça, gênero, idade, religião, orientação sexual, nacionalidade, deficiência ou qualquer outra característica protegida são estritamente proibidos.</p>

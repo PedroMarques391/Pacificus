@@ -14,7 +14,7 @@ const page = (): React.JSX.Element => {
     <main>
       <Layout>
         <Body
-          banner='bg-BannerTeam'
+          banner='bg-BannerTeam dark:bg-BannerTeamWhite'
           title='Conheça nosso time'
         >
           <div className='w-full flex justify-center items-center my-5 flex-wrap gap-14'>

@@ -10,7 +10,7 @@ interface IBodyProps {
 
 const Body = ({banner, title, children}: IBodyProps): React.JSX.Element => {
   return (
-    <main className='w-full flex flex-col items-center'>
+    <main className='w-full flex flex-col items-center dark:text-white'>
         <Banner background={banner}/>
         <section className='w-[90%] lg:w-4/5 lg:mt-5'>
             <H1 className='text-lg md:text-3xl tracking-widest italic my-5'>
