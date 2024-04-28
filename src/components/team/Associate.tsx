@@ -13,12 +13,12 @@ interface IAssociateProps {
 
 const Associate = ({ name, email, training, more }: IAssociateProps): React.JSX.Element => {
     return (
-        <section className='flex flex-col justify-between items-center w-full lg:w-[450px] lg:h-[650px] p-5 border border-gray-400 rounded-xl'>
-            <div className='flex justify-center items-center lg:gap-x-5'>
+        <section className='flex flex-col justify-between items-center w-full lg:w-[450px] lg:h-[750px] p-4 border border-gray-400 rounded-xl'>
+            <div className='flex justify-center items-center lg:gap-x-4'>
                 {IconUser}
                 <div>
-                    <H1 className='text-base lg:text-xl my-3 uppercase lg:tracking-wider'>{name}</H1>
-                    <H1 className='text-sm lg:text-lg my-3'>{email}</H1>
+                    <H1 className='text-base lg:text-xl uppercase lg:tracking-wider'>{name}</H1>
+                    <H1 className='text-sm lg:text-lg'>{email}</H1>
                 </div>
             </div>
 
