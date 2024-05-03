@@ -1,6 +1,6 @@
 # Pacificus & Associados
 
-Pacificus & Associados é um modelo de site desenvolvido para escritórios de advocacia, construído com TypeScript, React.js, Next.js e estilizado com Tailwind CSS.
+Pacificus & Associados é um modelo de site desenvolvido para escritórios de advocacia, construído com TypeScript, React.js, Next.js, Firebase e estilizado com Tailwind CSS.
 
 ## Funcionalidades
 
@@ -13,10 +13,15 @@ O site possui as seguintes rotas:
 - **Time**: Perfil dos advogados associados, incluindo suas especialidades, formação e atribuições.
 - **Contatos**: Formulário de contato e informações de contato do escritório.
 - **Ética e Código de Conduta**: Diretrizes éticas e código de conduta seguidos pelo escritório.
+- **Página 404**: Página de erro do escritório que com links para todas as rotas.
 
 ### Responsividade
 
 O site é totalmente responsivo para todos os tipos de tela, seguindo o método mobile first. Ele se adapta de forma elegante a dispositivos móveis, tablets e desktops.
+
+### Armazenamento Seguro de Informações
+
+Agora, as informações de contato enviadas pelo cliente através do formulário são cuidadosamente armazenadas em um banco de dados no Firebase Firestore. Isso garante a segurança e a integridade dos dados, permitindo seu acesso para uso futuro.
 
 ### Organização de Componentes
 
