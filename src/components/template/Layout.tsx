@@ -16,9 +16,6 @@ const Layout = ({ children }: ILayoutProps): React.JSX.Element => {
 
   const { theme } = useDarkContext()
 
-  console.log(theme);
-  
-
   useEffect(() => {
     const handleScroll = (): void => {
       setScrollOn(window.scrollY > 150);

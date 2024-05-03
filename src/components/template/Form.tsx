@@ -1,36 +1,56 @@
 "use client"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import H1 from "./H1"
 import FormInput from "./FormInput"
+import { addDoc, collection } from "firebase/firestore"
+import { db } from "@/firebase/firebase.config"
+
 
 
 const Form = (): React.JSX.Element => {
     const [name, setName] = useState<string>("")
     const [email, setEmail] = useState<string>("")
+    const [phoneNumber, setPhoneNumber] = useState<string>("")
     const [subject, setSubject] = useState<string>("")
     const [message, setMessage] = useState<string>("")
     const [isOk, setIsOk] = useState<any>('')
+    const [error, setError] = useState<any>('')
 
-    const showMessage = (message: string, timeInSeconds: number = 5): void => {
-        setIsOk(message)
-        setTimeout(() => { setIsOk(null) }, timeInSeconds * 1000)
+    const showMessage = (message: string, timeInSeconds: number = 5, good = true): void => {
+        good ? setIsOk(message) : setError(message)
+        setTimeout(() => { good ? setIsOk(null) : setError(null) }, timeInSeconds * 1000)
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
 
-        if (name || email || subject || message) {
-            setEmail("");
-            setName("");
-            setSubject("");
-            setMessage("");
-            showMessage("Tudo certo ✅")
+        if (name === "" || email === "" || subject === "" || message === "" ) {
+            return showMessage("Todos os campos precisam ser preenchidos.", 5, false)
         }
+        addDoc(collection(db, "clientsContacts"), {
+            name,
+            email,
+            subject,
+            phone: phoneNumber,
+            message,
+            criated: new Date()
+        })
+        .then(() => {
+            setName("")
+            setEmail("")
+            setPhoneNumber("")
+            setSubject("")
+            setMessage("")
+            showMessage("Dados cadastrados, em breve entraremos em contato.")
+        })
+        .catch(() => {
+            showMessage("Erro ao enviar informações, tente novamente.", 5, false)
+        })
+
+        
     }
 
-    useEffect(() => {
-
-    }, [name, email, subject, message])
+    
 
 
     return (
@@ -40,26 +60,42 @@ const Form = (): React.JSX.Element => {
                 <form onSubmit={handleSubmit} className="flex flex-col w-full">
                     <FormInput
                         inputName="Nome"
+                        placeholder="Dígite seu nome"
                         type="text"
+                        value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
 
 
                     <FormInput
                         inputName="E-mail"
+                        placeholder="seuemail@gmail.com"
                         type="email"
+                        value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
+
+                    <FormInput
+                        inputName="Número de telefone"
+                        placeholder="(11) 99999-9999"
+                        type="number"
+                        value={phoneNumber}
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                    />
+
                     <FormInput
                         inputName="Assunto"
+                        placeholder="digite o assunto..."
                         type="text"
+                        value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                     />
                     <label>
                         <p className="pl-5 py-2 text-lg dark:text-white/80">Sua mensagem</p>
                         <textarea
-                            className="py-2 pl-5 text-lg h-40 bg-light-200/10 w-full border border-light-200/40 rounded-md focus:outline-none dark:bg-white/90 dark:text-black"
-                            required
+                            className="py-2 pl-5 text-lg h-40 bg-light-200/10 w-full border border-light-200/40 rounded-md focus:outline-none dark:bg-white/90 dark:text-black placeholder:uppercase placeholder:tracking-widest"
+                            value={message}
+                            placeholder="Digite sua mensagem..."
                             onChange={(e) => setMessage(e.target.value)} />
                     </label>
 
@@ -70,6 +106,10 @@ const Form = (): React.JSX.Element => {
 
                     {isOk ? (<div className={`w-full border border-green-400 bg-green-200 p-2 rounded-lg mt-5 text-center text-xl text-green-600`}>
                         {isOk}
+                    </div>) : false}
+
+                    {error ? (<div className={`w-full border border-red-400 bg-red-200 p-2 rounded-lg mt-5 text-center text-xl text-red-600`}>
+                        {error}
                     </div>) : false}
 
                 </form>
