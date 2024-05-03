@@ -28,12 +28,12 @@ const Form = (): React.JSX.Element => {
             return showMessage("Todos os campos precisam ser preenchidos.", 5, false)
         }
         addDoc(collection(db, "clientsContacts"), {
-            name,
-            email,
-            subject,
+            name: name,
+            email: email,
+            subject: subject,
             phone: phoneNumber,
-            message,
-            criated: new Date()
+            message: message,
+            created: new Date()
         })
         .then(() => {
             setName("")
