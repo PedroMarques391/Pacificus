@@ -13,7 +13,7 @@ O site possui as seguintes rotas:
 - **Time**: Perfil dos advogados associados, incluindo suas especialidades, formação e atribuições.
 - **Contatos**: Formulário de contato e informações de contato do escritório.
 - **Ética e Código de Conduta**: Diretrizes éticas e código de conduta seguidos pelo escritório.
-- **Página 404**: Página de erro do escritório que com links para todas as rotas.
+- **Página 404**: Página de erro do escritório com links para todas as rotas.
 
 ### Responsividade
 
