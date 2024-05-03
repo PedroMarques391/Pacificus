@@ -15,7 +15,7 @@ const NotFound = () => {
         <div className='flex justify-center flex-col md:flex-row items-center h-auto md:h-screen bg-gradient-to-b from-white to bg-black'>
             <section className='flex flex-col gap-4 p-5 order-2 md:order-1'>
                 <h1 className='text-7xl italic text-center font-mono'>404</h1>
-                <h2 className='text-3xl text-black/50'>Não conseguimos achar essa página em nenhum lugar lugar!</h2>
+                <h2 className='text-3xl text-black/50'>Não conseguimos encontrar essa página em nenhum lugar!</h2>
                 <h3 className='text-2xl text-black/70'>Mas talvez a gente possa te ajudar a achar o que procura: </h3>
 
                 <ul>
