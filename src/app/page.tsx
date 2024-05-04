@@ -5,6 +5,7 @@ import H1 from "@/components/template/H1";
 import { IconBook } from "@/components/template/Icons";
 import Layout from "@/components/template/Layout";
 import type { Metadata} from "next";
+import { cookies } from "next/headers";
 
 
 export const metadata: Metadata = {
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+  const allCookies = cookies().getAll()
+  console.log(allCookies);
+  
   return (
     <Layout>
       <Body

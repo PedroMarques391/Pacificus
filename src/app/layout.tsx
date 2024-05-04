@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { DarkProvider } from "@/context/DarkContext";
+import FormProvider from "@/context/FormContext";
 
 export const metadata: Metadata = {
   title: `Pacificus & Associados`,
@@ -20,9 +21,11 @@ export default function RootLayout({
       lang="pt-br"
       className="!scroll-smooth">
       <body className={"playfair-display-font"}>
-        <DarkProvider>
-          {children}
-        </DarkProvider>
+        <FormProvider>
+          <DarkProvider>
+            {children}
+          </DarkProvider>
+        </FormProvider>
       </body>
     </html>
   );

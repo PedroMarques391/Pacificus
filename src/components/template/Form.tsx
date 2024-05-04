@@ -2,12 +2,12 @@
 import { useState } from "react"
 import H1 from "./H1"
 import FormInput from "./FormInput"
-import { addDoc, collection } from "firebase/firestore"
-import { db } from "@/firebase/firebase.config"
+import { useForm } from "@/hooks/useForm"
 
 
 
 const Form = (): React.JSX.Element => {
+    const {registerData} = useForm()
     const [name, setName] = useState<string>("")
     const [email, setEmail] = useState<string>("")
     const [phoneNumber, setPhoneNumber] = useState<string>("")
@@ -27,31 +27,20 @@ const Form = (): React.JSX.Element => {
         if (name === "" || email === "" || subject === "" || message === "" ) {
             return showMessage("Todos os campos precisam ser preenchidos.", 5, false)
         }
-        addDoc(collection(db, "clientsContacts"), {
-            name: name,
-            email: email,
-            subject: subject,
-            phone: phoneNumber,
-            message: message,
-            created: new Date()
-        })
-        .then(() => {
+        try {
+            registerData({name, email, phoneNumber, subject, message})
             setName("")
             setEmail("")
             setPhoneNumber("")
             setSubject("")
             setMessage("")
             showMessage("Dados cadastrados, em breve entraremos em contato.")
-        })
-        .catch(() => {
+            
+        } catch (error) {
             showMessage("Erro ao enviar informações, tente novamente.", 5, false)
-        })
-
+        }
         
     }
-
-    
-
 
     return (
         <section className='w-4/5 flex flex-col lg:flex-row justify-center mx-auto mb-20 gap-x-10'>
