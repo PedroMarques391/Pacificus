@@ -38,10 +38,16 @@ const config: Config = {
         line: {
           "0%": {"width": "0"},
           "100%": {"width": "100%"},
+        },
+        shake: {
+          "0%, 100%" : {transform: "translateX(0)"},
+          "25%, 75%": {transform: "translateX(-5px)"},
+          "50%": {transform: "translateX(5px)"},
         }
       },
       animation: {
-        lines: "line 1s ease-in-out forwards"
+        lines: "line 1s ease-in-out forwards",
+        shakeInput: "shake 1s ease-in-out"
       }
     },
   },

@@ -25,8 +25,10 @@ const Form = (): React.JSX.Element => {
         e.preventDefault();
 
         if (name === "" || email === "" || subject === "" || message === "" ) {
+            setError(true)
             return showMessage("Todos os campos precisam ser preenchidos.", 5, false)
         }
+        
         try {
             registerData({name, email, phoneNumber, subject, message})
             setName("")
@@ -51,6 +53,7 @@ const Form = (): React.JSX.Element => {
                         inputName="Nome"
                         placeholder="Dígite seu nome"
                         type="text"
+                        error={error}
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -58,6 +61,7 @@ const Form = (): React.JSX.Element => {
 
                     <FormInput
                         inputName="E-mail"
+                        error={error}
                         placeholder="seuemail@gmail.com"
                         type="email"
                         value={email}
@@ -68,6 +72,7 @@ const Form = (): React.JSX.Element => {
                         inputName="Número de telefone"
                         placeholder="(11) 99999-9999"
                         type="number"
+                        error={error}
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
                     />
@@ -76,13 +81,14 @@ const Form = (): React.JSX.Element => {
                         inputName="Assunto"
                         placeholder="digite o assunto..."
                         type="text"
+                        error={error}
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                     />
                     <label>
                         <p className="pl-5 py-2 text-lg dark:text-white/80">Sua mensagem</p>
                         <textarea
-                            className="py-2 pl-5 text-lg h-40 bg-light-200/10 w-full border border-light-200/40 rounded-md focus:outline-none dark:bg-white/90 dark:text-black placeholder:uppercase placeholder:tracking-widest"
+                            className={`${error && "border border-red-600 animate-shakeInput"} py-2 pl-5 text-lg h-40 bg-light-200/10 w-full border border-light-200/40 rounded-md focus:outline-none dark:bg-white/90 dark:text-black placeholder:uppercase placeholder:tracking-widest`}
                             value={message}
                             placeholder="Digite sua mensagem..."
                             onChange={(e) => setMessage(e.target.value)} />
